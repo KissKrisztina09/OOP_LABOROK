@@ -62,7 +62,7 @@ public class Company {
         }
     }
 
-    public void sortByComparator(Comparator<Employee> comp){
+    public void sortByComparator(Comparator <Employee> comp){
         Collections.sort(employees, comp);
     }
 }

@@ -22,5 +22,13 @@ public class Main {
         });
 
         myCompany.printAll(System.out);
+        myCompany.sortByComparator(new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return (int)(o1.getSalary() - o2.getSalary());
+            }
+        });
+        System.out.println("Fizetes szerint rendezve: ");
+        myCompany.printAll(System.out);
     }
 }
