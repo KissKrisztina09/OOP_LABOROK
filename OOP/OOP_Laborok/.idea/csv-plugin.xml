@@ -31,6 +31,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Labor_10\src\labor10_3\File.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Labor_10\src\labor10_3\FileUtil.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Labor_10\src\labor10_4\StackException.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Labor_4\src\Lab4_3\MyArray.java">
           <value>
             <Attribute>
@@ -101,6 +122,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Labor_8\src\labor8_1\CircularQueue.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Labor_8\src\labor8_2\ArrayListDictionary.java">
           <value>
             <Attribute>
@@ -165,6 +193,13 @@
           </value>
         </entry>
         <entry key="\Paricalis_Gyak\src\Feladat_1\Informatika.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\x.Eloadas\src\thread_unsafe\ThreadUnsafeCounter.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
