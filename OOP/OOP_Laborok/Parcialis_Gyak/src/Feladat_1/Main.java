@@ -7,7 +7,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Informatika felvetelizok = new Informatika();
+        Informatika felvetelizo = new Informatika();
+        felvetelizo.ujBeiratkozo(new Diak("Mezei", "Mária", 7.56, 8.78));
+        felvetelizo.ujBeiratkozo(new Diak("Asztalos", "Imre", 8.45,  7.25));
+        felvetelizo.listazOsszes();
+        System.out.println("******************************");
 
         Scanner scanner = null;
         try{
@@ -20,8 +24,7 @@ public class Main {
             System.exit(1);
         }
 
-        ArrayList<Diak> diakok = new ArrayList<>();
-        System.out.println(diakok.size());
+
         while (scanner.hasNextLine()){
             String line = scanner.nextLine();
             if(line.isEmpty()){
@@ -32,10 +35,9 @@ public class Main {
             String knev = items[1].trim();
             double erettsegi = Double.parseDouble(items[2].trim());
             double matematika = Double.parseDouble(items[3].trim());
-            diakok.add(new Diak(items[0].trim(), items[1].trim(), Double.parseDouble(items[2].trim()), Double.parseDouble(items[3].trim())));
+            felvetelizo.ujBeiratkozo(new Diak(items[0].trim(), items[1].trim(), Double.parseDouble(items[2].trim()), Double.parseDouble(items[3].trim())));
         }
-        for(Diak diak:diakok){
-            System.out.println(diak);
-        }
+        felvetelizo.listazAtlag(8);
+        System.out.println("Felvetelizok szama: " + felvetelizo.felvetelizokSzama() + ", atlag: " + felvetelizo.felvetelizokAtlaga());
     }
 }

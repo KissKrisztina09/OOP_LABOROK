@@ -1,27 +1,44 @@
 package labor10_1;
 
-public class TakeSomeFromArray extends Thread{
-    private String [] array;
-    private String str;
-    private int number;
+import java.util.Collections;
 
-    public TakeSomeFromArray(String[] array, String str, int number){
+public class TakeSomeFromArray extends Thread{
+    private String[] array;
+    private String string;
+    private int counter;
+
+    public TakeSomeFromArray(String[] array, String string, int counter) {
         this.array = array;
-        this.str = str;
-        this.number = number;
+        this.string = string;
+        this.counter = counter;
     }
 
     @Override
     public void run() {
-        synchronized (array) {
-            //nem tudom ha csak ennyi lenne ide
-            for (int i = 0; i < array.length; ++i) {
-                if (array[i] == str) {
-                    array[i] = " ";
+        int changes=0;
+        while(changes!=counter){
+            synchronized (this.array){
+                for(int i=0;i<array.length;i++){
+                    if(array[i].compareTo(string)==0){
+                        array[i]=" ";
+                        changes++;
+                        print();
+
+                        if(changes==counter){
+                            System.out.println(Thread.currentThread().getName()+": "+"String "+"'"+string+"'"+
+                                    " has been replaced "+ counter+" times, thread finishes its work");
+                        }
+                    }
                 }
             }
         }
     }
 
-
+    public void print(){
+        System.out.print(Thread.currentThread().getName()+": ");
+        System.out.println("String "+"'"+string+"'"+" has been replaced with ' '");
+    }
 }
+
+
+

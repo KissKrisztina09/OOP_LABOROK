@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Informatika {
 
-    private ArrayList<Diak> diakok = new ArrayList<>();
+    private ArrayList<Diak> diakok = new ArrayList<Diak>();
+    public Informatika(){
 
-    public static void ujBeiratkozo(Diak diak){
-
+    }
+    public void ujBeiratkozo(Diak diak){
         diakok.add(diak);
     }
 
@@ -16,6 +17,9 @@ public class Informatika {
     }
 
     public double felvetelizokAtlaga(){
+        if(felvetelizokSzama()==0){
+            return 0;
+        }
         double felvetelizokAtlag = 0 ;
         for( Diak diak:diakok){
             felvetelizokAtlag += diak.atlag();

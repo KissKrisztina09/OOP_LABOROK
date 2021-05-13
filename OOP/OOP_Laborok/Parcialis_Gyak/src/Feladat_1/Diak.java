@@ -12,6 +12,7 @@ public class Diak {
         this.erettsegi = erettsegi;
         this.matematika = matematika;
     }
+    public Diak(){}
     public String getVnev() {
         return vnev;
     }
